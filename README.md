@@ -1,16 +1,16 @@
 # ParallelProgramming-ArminHota
 
-OBJASNJENJE:
-BUG1: obadva for lopa lupaju od 0 do 10 ali array isde od 0 do 9 
+OBJASNJENJE:  
+BUG1: obadva for lopa lupaju od 0 do 10 ali array isde od 0 do 9   
 FIX: promjenio i<=10 u i<10
 
-BUG2: u prvom for lupu runalo je " iarray[i] = ipos; " ali nismo asignali nikakvu vrijednos ipos-u
+BUG2: u prvom for lupu runalo je " iarray[i] = ipos; " ali nismo asignali nikakvu vrijednos ipos-u  
 FIX: promjenio ipos da bude i tako da array drzi vrijednosti od 0 do 9
 
-BUG3: alokejtovali smo memori za array ali ga nikada nismo oslobodili
+BUG3: alokejtovali smo memori za array ali ga nikada nismo oslobodili  
 FIX: dodo " free(iarray) " na kraju
 
-BUGS:
+BUGS:  
 valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./Task1
 ==16287== Memcheck, a memory error detector
 ==16287== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
