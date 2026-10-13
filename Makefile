@@ -12,7 +12,7 @@ valgrind: $(TARGET)
 	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TARGET) 5
 
 valgrind-simple: $(TARGET)
-    valgrind --tool=memcheck --leak-check=yes ./$(TARGET)
+    valgrind --tool=memcheck --leak-check=yes ./$(TARGET) 5
 
 clean:
 	rm -f $(TARGET)
