@@ -1,8 +1,14 @@
- #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
  int main(int argc, char *argv[]){
   int ipos, ival;
   int *iarray = (int *) malloc(10*sizeof(int));
+
+  if (iarray == NULL) {
+        fprintf(stderr, "Memory allocation failed!\n");
+        return 1;
+    }
 
   if (argc == 2) ival = atoi(argv[1]);
 
