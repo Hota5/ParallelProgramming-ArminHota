@@ -11,6 +11,6 @@
 
     if (ival == iarray[i]) ipos = i;
   }
-    free(arr);  
+    free(iarray);  
     return 0;
  }
