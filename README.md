@@ -1,14 +1,14 @@
 # ParallelProgramming-ArminHota
 
-OBJASNJENJE:  
-BUG 1: obadva for lopa lupaju od 0 do 10 ali array isde od 0 do 9   
-FIX: promjenio i<=10 u i<10
+EXPLANATION:  
+BUG 1: The two for loops were looping from 0 to 10 but the array size was from 0 to 9  
+FIX: Changed "i<=10" to be "i<10"  
 
-BUG 2: u prvom for lupu runalo je " iarray[i] = ipos; " ali nismo asignali nikakvu vrijednos ipos-u  
-FIX: promjenio ipos da bude i tako da array drzi vrijednosti od 0 do 9
+BUG 2: In the first for loop it ran "iarray[i] = ipos;" but ipos wasent set to a value beforehand  
+FIX: Changed "ipos" into "i"  
 
-BUG3 : alokejtovali smo memori za array ali ga nikada nismo oslobodili  
-FIX: dodo " free(iarray) " na kraju
+BUG 3: At the beginning we used malloc to allocate memory for the array but we never freed the memory  
+FIX: Added "free(iarray)" at the end so before the program finishes it frees the memory  
 
 BUGS:    
 valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./Task1  
