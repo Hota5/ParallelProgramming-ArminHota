@@ -28,4 +28,4 @@ The better methods are slower because they do more work. Kahan and Knuth were th
 
 ## How this affects parallelization
 
-Adding decimals is not associative, so (a+b)+c can be a little different from a+(b+c). When we split the sum across several processors, the order of the additions changes, so we can get a different answer depending on how many processors we use. This makes results hard to reproduce. Methods like Kahan or pairwise make the answer depend less on the order, so they help with this.
+ When we split the sum across several processors, the order of the additions changes, so we can get a different answer depending on how many processors we use. This makes results hard to reproduce. Methods like Kahan or pairwise make the answer depend less on the order, so they help with this.
