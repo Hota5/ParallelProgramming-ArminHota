@@ -19,8 +19,8 @@ I took the sum code from the lab and added 4 more ways to add up numbers: long d
 
 The computer rounds a little on every addition. When the total gets big, the tiny numbers get rounded away, and with millions of additions the error adds up. That is why the normal sum is the worst.
 
-Long double has more digits so it loses less, but it still rounds a bit.
-Pairwise adds numbers that are about the same size, so less gets lost.
+Long double has more digits so it loses less, but it still rounds a bit.  
+Pairwise adds numbers that are about the same size, so less gets lost.  
 Kahan and Knuth keep the part that gets rounded off in a separate variable and add it back in later, so nothing is lost.
 
 The better methods are slower because they do more work. Kahan and Knuth were the slowest, so we trade speed for accuracy.
