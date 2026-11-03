@@ -8,6 +8,8 @@ I took the sum code from the lab and added 4 more ways to add up numbers: long d
 make
 ./sum_test | tee results.txt
 
+## Results
+
 | Method | Error | Run time (s) |
 |---|---|---|
 | Standard double | -0.01333 | 0.459910 |
