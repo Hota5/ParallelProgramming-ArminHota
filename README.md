@@ -4,10 +4,6 @@
 
 I took the sum code from the lab and added 4 more ways to add up numbers: long double, pairwise, Kahan and Knuth. The program fills an array with big numbers first and tiny numbers after that, adds it up with every method, and prints the error and the run time. I tested array sizes from 2^10 up to 2^27.
 
-## To run it:
-make
-./sum_test | tee results.txt
-
 ## Results
 
 | Method | Error | Run time (s) |
