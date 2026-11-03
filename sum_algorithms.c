@@ -1,0 +1,75 @@
+#include <stdlib.h>
+#include <math.h>
+#include "sum_algorithms.h"
+
+double do_sum(double* restrict var, long ncells)
+{
+   double sum = 0.0;
+   for (long i = 0; i < ncells; i++){
+      sum += var[i];
+   }
+   return sum;
+}
+
+long double do_ldsum(double* restrict var, long ncells)
+{
+   long double ldsum = 0.0L;
+   for (long i = 0; i < ncells; i++){
+      ldsum += var[i];
+   }
+   return ldsum;
+}
+
+double do_pair_sum(double* restrict var, long ncells)
+{
+   double *pwsum = (double *)malloc(ncells/2 * sizeof(double));
+
+   long nmax = ncells/2;
+   for (long i = 0; i < nmax; i++){
+      pwsum[i] = var[i*2] + var[i*2+1];
+   }
+
+   for (long j = 1; j < log2(ncells); j++){
+      nmax /= 2;
+      for (long i = 0; i < nmax; i++){
+         pwsum[i] = pwsum[i*2] + pwsum[i*2+1];
+      }
+   }
+   double sum = pwsum[0];
+
+   free(pwsum);
+   return sum;
+}
+
+double do_kahan_sum(double* restrict var, long ncells)
+{
+   double sum = 0.0;
+   double correction = 0.0;
+
+   for (long i = 0; i < ncells; i++){
+      double corrected_next_term = var[i] + correction;
+      double new_sum             = sum + corrected_next_term;
+      correction                 = corrected_next_term - (new_sum - sum);
+      sum                        = new_sum;
+   }
+
+   return sum + correction;
+}
+
+double do_knuth_sum(double* restrict var, long ncells)
+{
+   double sum = 0.0;
+   double correction = 0.0;
+
+   for (long i = 0; i < ncells; i++){
+      double u   = sum;
+      double v   = var[i] + correction;
+      double upt = u + v;
+      double up  = upt - v;
+      double vpp = upt - up;
+      sum        = upt;
+      correction = (u - up) + (v - vpp);
+   }
+
+   return sum + correction;
+}
