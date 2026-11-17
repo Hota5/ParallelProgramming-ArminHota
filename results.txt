@@ -1,0 +1,41 @@
+student@itcenter-lab128:~/Desktop/Task$ ./stencil_opt2
+Running with 4 thread(s)
+Iter 0
+Iter 1000
+Iter 2000
+Iter 3000
+Iter 4000
+Iter 5000
+Iter 6000
+Iter 7000
+Iter 8000
+Iter 9000
+Timing is init 0.018459 flush 70.069045 stencil 139.861689 total 209.954172
+student@itcenter-lab128:~/Desktop/Task$ ./stencil_opt4
+Running with 4 thread(s)
+Iter 0
+Iter 1000
+Iter 2000
+Iter 3000
+Iter 4000
+Iter 5000
+Iter 6000
+Iter 7000
+Iter 8000
+Iter 9000
+Timing is init 0.019674 flush 68.993784 stencil 139.866831 total 208.895027
+student@itcenter-lab128:~/Desktop/Task$ ./stencil_opt6
+Running with 4 thread(s)
+Iter 0
+Iter 1000
+Iter 2000
+Iter 3000
+Iter 4000
+Iter 5000
+Iter 6000
+Iter 7000
+Iter 8000
+Iter 9000
+Timing is init 0.019564 flush 68.618904 stencil 139.634496 total 208.533665
+student@itcenter-lab128:~/Desktop/Task$ 
+                                          
