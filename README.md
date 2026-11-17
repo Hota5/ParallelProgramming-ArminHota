@@ -4,7 +4,7 @@
 
 ### What I did
 Downloaded Example_06 from the course github and `stencil_opt6.c` from the book's github. In the Makefile I only changed the `SOURCES` line to build the 3 versions:
-
+ 
 ```
 SOURCES = stencil_opt2.c stencil_opt4.c stencil_opt6.c
 ```
