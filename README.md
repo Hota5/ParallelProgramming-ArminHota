@@ -18,7 +18,7 @@ make rebuild
 ./stencil_opt6
 ```
 
-Every run said `Running with 4 thread(s)`. Full output is in `results.txt`. Screenshot: ![screenshot](resultsScreenshot.png)
+Every run said `Running with 4 thread(s)`. Full output is in `results.txt`. Screenshot: ![screenshot](resultsSceenshot.png)
 
 ### Results
 | Version | init (s) | flush (s) | stencil (s) | total (s) |
